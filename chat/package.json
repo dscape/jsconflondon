@@ -6,7 +6,8 @@
   "main": "lib/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js 80",
+    "start": "node server.js 80 emit",
+    "start_remote": "ssh root@londonjsconf.yld.io /opt/www/bin/start emit",
     "deploy": "rsync -ru * root@londonjsconf.yld.io:/opt/www",
     "experiment": "ssh root@londonjsconf.yld.io /opt/www/bin/start",
     "artillery": "./bin/artillery load_test.js",

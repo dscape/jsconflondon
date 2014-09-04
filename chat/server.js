@@ -35,7 +35,7 @@ server.on('connection', function (socket) {
     if(!client.connected()) {
       return socket.close();
     }
-    console.log(uuid + '> ' + data);
+    console.log(uuid + '> ' + data + ':' + emit);
     if(emit) {
       client.say(uuid, data);
     } else {

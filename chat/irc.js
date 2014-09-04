@@ -46,8 +46,6 @@ connectToIRC(function (err, ircb) {
   irc = ircb;
   irc.connected = true;
   irc.on('message', function (who, where, wat) {
-    if(/nodejs/.test(who))
-      return; // ignore other bots
     var match = wat.match(/#[a-z0-9]{5,6}/);
     if(match) {
       var uuid = match[0];
@@ -65,6 +63,7 @@ module.exports = exports = function () {
   return {
     connected: function () { return irc && irc.connected; },
     say: function (uuid, msg) {
+      console.log('saying', msg, 'to', cfg.channel);
       irc.say(cfg.channel, msg + ' ' + uuid);
     },
     register: function (uuid, socket) {
