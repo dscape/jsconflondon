@@ -1,0 +1,26 @@
+{
+  "name": "simplechat",
+  "version": "0.0.0-4",
+  "subdomain": "hahaha1",
+  "description": "A simple way for people to communicate with us without knowing they are using irc",
+  "main": "lib/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js 80",
+    "deploy": "rsync -ru * root@londonjsconf.yld.io:/opt/www",
+    "experiment": "ssh root@londonjsconf.yld.io /opt/www/bin/start",
+    "artillery": "./bin/artillery load_test.js",
+    "results": "ssh root@londonjsconf.yld.io /opt/www/bin/results"
+  },
+  "repository": "",
+  "author": "nuno job @dscape",
+  "license": "MIT",
+  "dependencies": {
+    "node-static": "~0.6.7",
+    "ircb": "~0.1.2",
+    "engine.io": "~0.4.3"
+  },
+  "engines": {
+    "node": "0.8.x"
+  }
+}
