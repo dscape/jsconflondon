@@ -3,7 +3,7 @@
 
     * refactoring, security, npm, deployment
 
-     > https://github.com/yldio/lnug-performance-talk
+     > github.com/yldio/jsconflondon
 
      ___________
     < thank you, any questions? >

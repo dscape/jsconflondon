@@ -1,5 +1,5 @@
 
-  # npm run experiment > results
+  # npm run results
 
     * scared? i am.
 
